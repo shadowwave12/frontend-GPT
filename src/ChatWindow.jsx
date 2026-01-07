@@ -35,7 +35,7 @@ function ChatWindow() {
 
     try {
       const response = await fetch(
-        "https://backend-gpt-986l.onrender.com:8080/api/chat",
+        "https://backend-gpt-986l.onrender.com/:8080/api/chat",
         options
       );
       const res = await response.json();
