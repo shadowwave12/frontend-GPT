@@ -18,7 +18,7 @@ function Sidebar() {
   const getAllThreads = async () => {
     try {
       const response = await fetch(
-        "https://backend-gpt-986l.onrender.com/:8080/api/thread"
+        "https://backend-gpt-986l.onrender.com/api/thread"
       );
       const res = await response.json();
       const filteredData = res.map((thread) => ({
@@ -49,7 +49,7 @@ function Sidebar() {
 
     try {
       const response = await fetch(
-        `https://backend-gpt-986l.onrender.com/:8080/api/thread/${newThreadId}`
+        `https://backend-gpt-986l.onrender.com/api/thread/${newThreadId}`
       );
       const res = await response.json();
       console.log(res);
@@ -64,7 +64,7 @@ function Sidebar() {
   const deleteThread = async (threadId) => {
     try {
       const response = await fetch(
-        `https://backend-gpt-986l.onrender.com/:8080/api/thread/${threadId}`,
+        `https://backend-gpt-986l.onrender.com/api/thread/${threadId}`,
         { method: "DELETE" }
       );
       const res = await response.json();
