@@ -36,7 +36,7 @@ function ChatWindow() {
     try {
       const response = await fetch(
         "https://backend-gpt-986l.onrender.com/api/chat",
-        options
+        options,
       );
       const res = await response.json();
       console.log(res);
@@ -74,7 +74,7 @@ function ChatWindow() {
     <div className="chatWindow">
       <div className="navbar">
         <span>
-          SigmaGPT <i className="fa-solid fa-chevron-down"></i>
+          GPT <i className="fa-solid fa-chevron-down"></i>
         </span>
         <div className="userIconDiv" onClick={handleProfileClick}>
           <span className="userIcon">
@@ -112,8 +112,7 @@ function ChatWindow() {
           </div>
         </div>
         <p className="info">
-          SigmaGPT can make mistakes. Check important info. See Cookie
-          Preferences.
+          GPT can make mistakes. Check important info. See Cookie Preferences.
         </p>
       </div>
     </div>
