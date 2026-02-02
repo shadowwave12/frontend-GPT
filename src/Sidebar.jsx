@@ -18,7 +18,7 @@ function Sidebar() {
   const getAllThreads = async () => {
     try {
       const response = await fetch(
-        "https://backend-gpt-986l.onrender.com/api/thread"
+        "https://backend-gpt-986l.onrender.com/api/thread",
       );
       const res = await response.json();
       const filteredData = res.map((thread) => ({
@@ -49,7 +49,7 @@ function Sidebar() {
 
     try {
       const response = await fetch(
-        `https://backend-gpt-986l.onrender.com/api/thread/${newThreadId}`
+        `https://backend-gpt-986l.onrender.com/api/thread/${newThreadId}`,
       );
       const res = await response.json();
       console.log(res);
@@ -65,14 +65,14 @@ function Sidebar() {
     try {
       const response = await fetch(
         `https://backend-gpt-986l.onrender.com/api/thread/${threadId}`,
-        { method: "DELETE" }
+        { method: "DELETE" },
       );
       const res = await response.json();
       console.log(res);
 
       //updated threads re-render
       setAllThreads((prev) =>
-        prev.filter((thread) => thread.threadId !== threadId)
+        prev.filter((thread) => thread.threadId !== threadId),
       );
 
       if (threadId === currThreadId) {
@@ -114,10 +114,6 @@ function Sidebar() {
           </li>
         ))}
       </ul>
-
-      <div className="sign">
-        <p>By ApnaCollege &hearts;</p>
-      </div>
     </section>
   );
 }
